@@ -1,0 +1,9 @@
+<div class="container mt-5 text-center"> 
+        <form [formGroup]= "loginForm" class="form-inline my-2 my-lg-0">
+            <div>
+                <input class="form-control mr-sm-2" type="text" formControlName="userName" placeholder="Username" aria-label="Username">
+                <input class="form-control mr-sm-2" formControlName="password" type="password" placeholder="Password" aria-label="Password">
+                <button class="btn btn-primary my-2 my-sm-0" (click)="onLogin()" >Login</button>
+            </div>
+        </form>
+</div>

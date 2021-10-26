@@ -1,0 +1,30 @@
+<div class=" border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Book Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" routerLink="/" routerLinkActive >All Books </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/subscriptions"> Book Subscriptions</a>
+            </li>
+          </ul>
+          <div *ngIf="!isAuthenticated()" class="form-inline my-2 my-lg-0">
+              <button class="btn btn-primary mr-2" routerLink="/login">Login</button>
+              <button class="btn btn-outline-primary">Register</button>
+          </div>
+          <div *ngIf="isAuthenticated()">
+            <button class="btn btn-primary my-2 my-sm-0"  >Logout</button>
+        </div>
+        </div>
+      </nav>
+</div>
+<router-outlet></router-outlet>
+
+
+
